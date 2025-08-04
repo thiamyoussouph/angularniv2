@@ -1,0 +1,10 @@
+<div class="card ms-5" style="width: 18rem;">
+  <img [src]="image" class="card-img-top" [alt]="alt">
+  <div class="card-body">
+    <h5 class="card-title">{{titre}}</h5>
+    <p class="card-text">{{description}}</p>
+    <a href="#" class="btn btn-primary me-5" (click)="compter()">like</a>
+    <a href="#" class="btn btn-primary me-5 " (click)="decompter()">dislike</a>
+    <span class="compteur">{{compteur}}</span>
+  </div>
+</div>
