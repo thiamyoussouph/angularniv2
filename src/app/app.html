@@ -1,23 +1,22 @@
-
 <app-navbar></app-navbar>
 
 <h1>Welcome to Senjus</h1>
-<h3></h3>
 
-  <section class="container">
-     <app-article 
-     [titre]="titre" 
-     [description]="description"
-      [image]="image"
+<h1 style="color: green;">{{message}}</h1>
+<section class="container">
+
+   <app-article [titre]="titre" [description]="description" [image]="image" (info)="getmessage($event)">
       ></app-article>
-      <app-article [titre]="titreBissap" [description]="descriptionBissap" [image]="imageBissap"></app-article>
-     <app-article [titre]="titreGingembre" [description]="descriptionGingembre" [image]="imageGingembre"></app-article>
-     <app-article [titre]="titreMangue" [description]="descriptionMangue" [image]="imageMangue"></app-article>
+   <app-article [titre]="titreBissap" [description]="descriptionBissap" [image]="imageBissap"
+      (info)="getmessage($event)"></app-article>
+   <app-article [titre]="titreGingembre" [description]="descriptionGingembre" [image]="imageGingembre"
+      (info)="getmessage($event)"></app-article>
+   <app-article [titre]="titreMangue" [description]="descriptionMangue" [image]="imageMangue"
+      (info)="getmessage($event)"></app-article>
 
-     
- 
-  </section>
-  <h1></h1>
 
-  <app-footer></app-footer>
 
+</section>
+<h1></h1>
+
+<app-footer></app-footer>

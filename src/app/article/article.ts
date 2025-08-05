@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-article',
@@ -12,9 +12,13 @@ import { Component, Input } from '@angular/core';
   @Input() image: string = '';
   @Input() alt: string = '';
   @Input() name: string = '';
+  @Output() info=new EventEmitter<string>();
 compteur:number=0;
 compter(){
+
   this.compteur++;
+  this.info.emit(this.titre);
+  
 
 }
 decompter(){

@@ -14,29 +14,20 @@ import { Footer } from "./footer/footer";
 })
 export class App {
   protected readonly title = signal('senjus');
+tabarticle=[
+ {  titre: 'jus d or', description: 'Un jus d or frais et vitaminé', image: 'assets/jusdorange.jpg', alt: 'jus d or' }
+, 
+ {  titre: 'jus de mangue', description: 'Un jus de mangue sucré et rafraîchissant', image: 'assets/imagmg.jpg', alt: 'jus de mangue' },
+ {  titre: 'jus de bisap', description: 'Un jus de bisap délicieux et naturel', image: 'assets/jusbisp.jpg', alt: 'jus de bisap' },
+ {  titre: 'jus d gingembre', description: 'Un jus d gingembre épicé et énergisant', image: 'assets/jusgin.jpg', alt: 'jus d gingembre' }
+]
 
-//jus d orange
- titre: string = 'jus d\'orange';
-  description: string = 'Un jus d\'orange frais et vitaminé';
-  image: string = 'assets/jusdorange.jpg';
-  alt: string = 'jus d\'orange';
-
-
-  //jus de bissap
-  titreBissap: string = 'jus de bissap';
-  descriptionBissap: string = 'Un jus de bissap rafraîchissant';
-  imageBissap: string = 'assets/jusbisp.jpg';
-  altBissap: string = 'jus de bissap';
-  //jus de gingembre
-  titreGingembre: string = 'jus de gingembre';
-  descriptionGingembre: string = 'Un jus de gingembre épicé et énergisant';
-  imageGingembre: string = 'assets/jusgin.jpg';
-  altGingembre: string = 'jus de gingembre';
-  //jus mangue
-  titreMangue: string = 'jus de mangue';
-  descriptionMangue: string = 'Un jus de mangue sucré et tropical';
-  imageMangue: string = 'assets/imagmg.jpg';
-  altMangue: string = 'jus de mangue';
   name:string="moussa";
+message: string = '';
+getmessage(event: string) {
+   this.message="merci d avoir liker "+event;
+  console.log(event);
+}
+
 }
 
