@@ -5,6 +5,7 @@ h1{
 .container {
    display: flex;
    gap: 1px;
+ flex-wrap: wrap;
    
    
 }

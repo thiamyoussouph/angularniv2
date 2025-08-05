@@ -5,14 +5,13 @@
 <h1 style="color: green;">{{message}}</h1>
 <section class="container">
 
-   <app-article [titre]="titre" [description]="description" [image]="image" (info)="getmessage($event)">
-      ></app-article>
-   <app-article [titre]="titreBissap" [description]="descriptionBissap" [image]="imageBissap"
-      (info)="getmessage($event)"></app-article>
-   <app-article [titre]="titreGingembre" [description]="descriptionGingembre" [image]="imageGingembre"
-      (info)="getmessage($event)"></app-article>
-   <app-article [titre]="titreMangue" [description]="descriptionMangue" [image]="imageMangue"
-      (info)="getmessage($event)"></app-article>
+   <app-article *ngFor="let article of tabarticle" 
+   [titre]="article.titre" 
+   [description]="article.description"
+   [image]="article.image" 
+   (info)="getmessage($event)" >
+   </app-article>
+
 
 
 
